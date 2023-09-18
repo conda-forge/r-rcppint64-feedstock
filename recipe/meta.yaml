@@ -34,6 +34,7 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - r-rcpp >=1.0.8               # [build_platform != target_platform]
   host:
     - r-base
     - r-rcpp >=1.0.8
@@ -57,11 +58,11 @@ about:
   home: https://github.com/eddelbuettel/rcppint64
   license: GPL-2.0-or-later
   summary: >-
-    "'Int64' values can be created and accessed via the 'bit64' package and its
+    'Int64' values can be created and accessed via the 'bit64' package and its
     'integer64' class which package the 'int64' representation cleverly into a
     'double'. This packages helps conversions between 'R' and 'C++' via several
     helper functions provided via a single header file. A complete example
-    client package is included as an illustration."
+    client package is included as an illustration.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
