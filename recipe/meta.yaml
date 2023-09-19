@@ -49,6 +49,7 @@ test:
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}make
     - r-bit64
+    - r-nanotime
     - r-tinytest
   commands:
     - Rscript -e "library('RcppInt64')"
